@@ -8,7 +8,7 @@ import io.bloc.android.blocly.api.model.RssFeed;
 import io.bloc.android.blocly.api.model.RssItem;
 
 /**
- * Created by Benja on 9/11/2016.
+ * Created by Ben on 9/11/2016.
  */
 public class DataSource
 {
