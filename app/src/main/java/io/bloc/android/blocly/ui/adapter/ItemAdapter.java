@@ -99,6 +99,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
             {
                 headerImage.setImageBitmap(loadedImage);
                 headerImage.setVisibility(View.VISIBLE);
+                Log.d(TAG, "onLoadingComplete for url: " + imageUri);
             }
         }
 
@@ -106,6 +107,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
         public void onLoadingCancelled(String imageUri, View view)
         {
             // Attempt a retry
+            Log.i(TAG, "onLoadingCancelled; retrying for URL: " + imageUri);
             ImageLoader.getInstance().loadImage(imageUri, this);
         }
     }
