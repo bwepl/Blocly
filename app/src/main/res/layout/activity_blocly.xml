@@ -3,10 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/bkrd_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wood_floor"
+    />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_activity_blocly"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+
     />
 
 </LinearLayout>
