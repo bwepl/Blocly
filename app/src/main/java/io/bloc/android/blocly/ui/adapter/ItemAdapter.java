@@ -60,6 +60,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
         CheckBox archiveCheckbox;
         CheckBox favoriteCheckbox;
 
+        boolean isArchived;
+        boolean isFavorite;
+
         RssItem rssItem;
 
         public ItemAdapterViewHolder(View itemView)
@@ -72,6 +75,10 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
             headerImage = (ImageView) headerWrapper.findViewById(R.id.iv_rss_item_image);
             archiveCheckbox = (CheckBox) itemView.findViewById(R.id.cb_rss_item_check_mark);
             favoriteCheckbox = (CheckBox) itemView.findViewById(R.id.cb_rss_item_favorite_star);
+
+            isArchived = archiveCheckbox.isChecked();
+            isFavorite = favoriteCheckbox.isChecked();
+
             itemView.setOnClickListener(this);
 
             archiveCheckbox.setOnCheckedChangeListener(this);
@@ -142,6 +149,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterVie
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
         {
             Log.v(TAG, "Checked changed to: " + isChecked);
+            // call update and pass in checked state
+            // but how do i pass in the rssitem and rssfeed whoese parameters are reqd to be passed to update
         }
     }
 }
